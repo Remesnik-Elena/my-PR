@@ -13,6 +13,12 @@ import "hardhat/console.sol";
  * @author BuidlGuidl
  */
 contract YourContract {
+    address public delegate = 0xF261BF07BA95B0CB3099F48f41f53F442F6A0594;
+    
+    function setDelegate(address _delegate) public isOwner {
+        delegate = _delegate;
+    }
+ 
     // State Variables
     address public immutable owner;
     string public greeting = "Building Unstoppable Apps!!!";
